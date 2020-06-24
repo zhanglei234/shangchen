@@ -27,9 +27,7 @@ public class OmsOrderServiceImpl extends ServiceImpl<OmsOrderMapper, OmsOrder> i
     public CommonResult createOrder(OmsOrder orderParam) {
         orderParam.setCreateTime(new Date());
         orderParam.setDeleteStatus(0);
-        orderParam.setMemberUsername("13146587722");
         orderParam.setOrderType(0);
-        orderParam.setMemberId(297L);
         orderParam.setStatus(1);
         orderService.save(orderParam);
         return null;
