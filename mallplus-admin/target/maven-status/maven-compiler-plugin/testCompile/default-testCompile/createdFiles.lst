@@ -1,0 +1,12 @@
+com\zscat\mallplus\News.class
+com\zscat\mallplus\SinaNew.class
+com\zscat\mallplus\qczj\GrapNews.class
+com\zscat\mallplus\Demo2.class
+com\zscat\mallplus\HttpRequestUtils.class
+com\zscat\mallplus\tyPc\ZJNewsListPipelines.class
+com\zscat\mallplus\qczj\News.class
+com\zscat\mallplus\GlobalConstants.class
+com\zscat\mallplus\JsoupTest.class
+com\zscat\mallplus\tyPc\ZJNewsDetail.class
+com\zscat\mallplus\qczj\newCrawl.class
+com\zscat\mallplus\tyPc\ZJNewsGeccoList.class
