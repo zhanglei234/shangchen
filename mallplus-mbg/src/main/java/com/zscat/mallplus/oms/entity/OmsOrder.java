@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.zscat.mallplus.utils.BaseEntity;
 import lombok.Data;
 
@@ -53,6 +54,7 @@ public class OmsOrder extends BaseEntity implements Serializable {
     /**
      * 提交时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     @TableField("create_time")
     private Date createTime;
 
@@ -318,5 +320,8 @@ public class OmsOrder extends BaseEntity implements Serializable {
 
     @TableField("store_name")
     private String storeName;    //	税号
+
+
+    private String pic;
 
 }
