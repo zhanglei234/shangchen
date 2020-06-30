@@ -6,7 +6,6 @@ import java.util.Date;
 
 /**
  * TimeLineData
- *
  */
 @Data
 public class TimelinePost {

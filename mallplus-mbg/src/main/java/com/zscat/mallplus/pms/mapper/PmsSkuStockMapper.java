@@ -10,7 +10,6 @@ import java.util.List;
  * <p>
  * sku的库存 Mapper 接口
  * </p>
- *
  */
 public interface PmsSkuStockMapper extends BaseMapper<PmsSkuStock> {
     /**

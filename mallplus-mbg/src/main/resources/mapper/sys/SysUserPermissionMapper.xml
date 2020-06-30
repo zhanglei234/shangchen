@@ -3,7 +3,6 @@
 <mapper namespace="com.zscat.mallplus.sys.mapper.SysUserPermissionMapper">
 
 
-
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id, admin_id, permission_id, type

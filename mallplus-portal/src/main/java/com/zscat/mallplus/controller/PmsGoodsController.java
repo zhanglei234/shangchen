@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zscat.mallplus.annotation.IgnoreAuth;
- import com.zscat.mallplus.enums.ConstansValue;
+import com.zscat.mallplus.enums.ConstansValue;
 import com.zscat.mallplus.pms.entity.*;
 import com.zscat.mallplus.pms.mapper.PmsCommentMapper;
 import com.zscat.mallplus.pms.mapper.PmsProductAttributeMapper;
@@ -38,7 +38,7 @@ public class PmsGoodsController {
 
     @Autowired
     private IPmsProductAttributeCategoryService productAttributeCategoryService;
-     @Autowired
+    @Autowired
     private IPmsProductService pmsProductService;
     @Autowired
     private IPmsProductCategoryService pmsProductCategoryService;
@@ -47,7 +47,7 @@ public class PmsGoodsController {
 
     @Autowired
     private IPmsProductCategoryService productCategoryService;
-     @Autowired
+    @Autowired
     private IUmsMemberService memberService;
     @Autowired
     private IPmsProductConsultService pmsProductConsultService;
@@ -168,7 +168,6 @@ public class PmsGoodsController {
     }
 
 
-
     /**
      * 分类下的商品
      *
@@ -178,15 +177,14 @@ public class PmsGoodsController {
     @ApiOperation(value = "分类下的商品")
     @GetMapping("/goods")
     public Object goods(@RequestParam(value = "id", required = false, defaultValue = "0") Long id) {
-             PmsProduct productQueryParam = new PmsProduct();
-            productQueryParam.setProductAttributeCategoryId(id);
+        PmsProduct productQueryParam = new PmsProduct();
+        productQueryParam.setProductAttributeCategoryId(id);
 
-            productQueryParam.setPublishStatus(1);
-            productQueryParam.setVerifyStatus(1);
-           List<PmsProduct> list= pmsProductService.list(new QueryWrapper<>(productQueryParam).select(ConstansValue.sampleGoodsList));
-         return new CommonResult().success(list);
+        productQueryParam.setPublishStatus(1);
+        productQueryParam.setVerifyStatus(1);
+        List<PmsProduct> list = pmsProductService.list(new QueryWrapper<>(productQueryParam).select(ConstansValue.sampleGoodsList));
+        return new CommonResult().success(list);
     }
-
 
 
 }

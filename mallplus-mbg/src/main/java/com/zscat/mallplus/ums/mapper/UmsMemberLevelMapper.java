@@ -7,7 +7,6 @@ import com.zscat.mallplus.ums.entity.UmsMemberLevel;
  * <p>
  * 会员等级表 Mapper 接口
  * </p>
- *
  */
 public interface UmsMemberLevelMapper extends BaseMapper<UmsMemberLevel> {
 

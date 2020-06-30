@@ -16,7 +16,6 @@ import java.util.Date;
  * <p>
  * 商品信息
  * </p>
- *
  */
 @Data
 @TableName("pms_product")

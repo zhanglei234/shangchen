@@ -6,6 +6,7 @@ import com.zscat.mallplus.sys.entity.SysArea;
 import java.util.List;
 
 /**
+ *
  */
 public class AreaWithChildrenItem extends SysArea {
     private List<SysArea> children;

@@ -14,7 +14,6 @@ import java.util.Date;
  * <p>
  * 后台用户表
  * </p>
- *
  */
 @Data
 @TableName("sys_user")
@@ -72,7 +71,6 @@ public class SysUser extends BaseEntity implements Serializable {
      */
     @TableField("supply_id")
     private Long supplyId;
-
 
 
     //角色

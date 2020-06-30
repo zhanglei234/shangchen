@@ -13,7 +13,6 @@ import java.util.List;
  * <p>
  * <p>
  * </p>
- *
  */
 @Data
 @TableName("sys_area")

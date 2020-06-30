@@ -49,13 +49,13 @@ public class UmsMemberServiceImpl extends ServiceImpl<UmsMemberMapper, UmsMember
     @Resource
     private UserDetailsService userDetailsService;
 
-     @Resource
+    @Resource
     private UmsMemberMapper memberMapper;
     @Resource
     private BCryptPasswordEncoder passwordEncoder;
     @Resource
     private RedisService redisService;
-      @Resource
+    @Resource
     private JwtTokenUtil jwtTokenUtil;
     @Value("${redis.key.prefix.authCode}")
     private String REDIS_KEY_PREFIX_AUTH_CODE;
@@ -73,7 +73,6 @@ public class UmsMemberServiceImpl extends ServiceImpl<UmsMemberMapper, UmsMember
     public UmsMember getNewCurrentMember() {
         return (UmsMember) this.getCurrentMember();
     }
-
 
 
     @Override
@@ -99,7 +98,7 @@ public class UmsMemberServiceImpl extends ServiceImpl<UmsMemberMapper, UmsMember
                 String authToken = authHeader.substring("Bearer".length());
                 String username = jwtTokenUtil.getUserNameFromToken(authToken);
                 if (ValidatorUtils.notEmpty(username)) {
-                    member = JsonUtils.jsonToPojo(redisService.get( String.format(Rediskey.MEMBER, username)), UmsMember.class);
+                    member = JsonUtils.jsonToPojo(redisService.get(String.format(Rediskey.MEMBER, username)), UmsMember.class);
                     if (member == null || member.getId() == null) {
                         member = getByUsername(username);
                     }
@@ -116,9 +115,6 @@ public class UmsMemberServiceImpl extends ServiceImpl<UmsMemberMapper, UmsMember
     }
 
 
-
-
-
     @Override
     public UmsMember getByUsername(String username) {
         UmsMember umsMember = new UmsMember();
@@ -126,7 +122,6 @@ public class UmsMemberServiceImpl extends ServiceImpl<UmsMemberMapper, UmsMember
 
         return memberMapper.selectOne(new QueryWrapper<>(umsMember));
     }
-
 
 
     @Override
@@ -146,8 +141,6 @@ public class UmsMemberServiceImpl extends ServiceImpl<UmsMemberMapper, UmsMember
         }
         return this.register(umsMember);
     }
-
-
 
 
     /**
@@ -220,7 +213,7 @@ public class UmsMemberServiceImpl extends ServiceImpl<UmsMemberMapper, UmsMember
             InputStream inputStream = new ByteArrayInputStream(qrCode.getByteArray());
 
 //            umsMember.setAvatar(aliyunOSSUtil.upload("png", inputStream));
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
 
@@ -228,7 +221,7 @@ public class UmsMemberServiceImpl extends ServiceImpl<UmsMemberMapper, UmsMember
 
         redisService.set(String.format(Rediskey.MEMBER, umsMember.getUsername()), JsonUtils.objectToJson(umsMember));
 
-         umsMember.setPassword(null);
+        umsMember.setPassword(null);
         return new CommonResult().success("注册成功", null);
     }
 
@@ -265,7 +258,6 @@ public class UmsMemberServiceImpl extends ServiceImpl<UmsMemberMapper, UmsMember
     }
 
 
-
     //对输入的验证码进行校验
     private boolean verifyAuthCode(String authCode, String telephone) {
         if (StringUtils.isEmpty(authCode)) {
@@ -293,7 +285,7 @@ public class UmsMemberServiceImpl extends ServiceImpl<UmsMemberMapper, UmsMember
             }*/
 
             //   Authentication authentication = authenticationManager.authenticate(authenticationToken);
-             Authentication authentication = new UsernamePasswordAuthenticationToken(
+            Authentication authentication = new UsernamePasswordAuthenticationToken(
                     userDetails, null, userDetails.getAuthorities());
             SecurityContextHolder.getContext().setAuthentication(authentication);
             token = jwtTokenUtil.generateToken(userDetails);

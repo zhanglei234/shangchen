@@ -12,8 +12,7 @@ import java.io.Serializable;
  * <p>
  * 优选专区和产品关系表
  * </p>
- *
-  */
+ */
 @TableName("cms_prefrence_area_product_relation")
 public class CmsPrefrenceAreaProductRelation extends BaseEntity implements Serializable {
 

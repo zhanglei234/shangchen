@@ -14,7 +14,6 @@ import java.util.Date;
  * <p>
  * 后台用户角色表
  * </p>
- *
  */
 @Data
 @TableName("sys_role")

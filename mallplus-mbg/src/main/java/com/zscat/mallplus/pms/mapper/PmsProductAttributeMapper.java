@@ -11,7 +11,6 @@ import java.util.List;
  * <p>
  * 商品属性参数表 Mapper 接口
  * </p>
- *
  */
 public interface PmsProductAttributeMapper extends BaseMapper<PmsProductAttribute> {
 

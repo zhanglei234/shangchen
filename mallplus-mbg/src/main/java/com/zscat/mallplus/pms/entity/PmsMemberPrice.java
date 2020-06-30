@@ -13,7 +13,6 @@ import java.math.BigDecimal;
  * <p>
  * 商品会员价格表
  * </p>
- *
  */
 @TableName("pms_member_price")
 public class PmsMemberPrice extends BaseEntity implements Serializable {

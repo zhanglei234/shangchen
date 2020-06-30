@@ -11,5 +11,4 @@ import com.zscat.mallplus.pms.entity.PmsProduct;
 public interface IPmsProductService extends IService<PmsProduct> {
 
 
-
 }

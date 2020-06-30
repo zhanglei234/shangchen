@@ -13,7 +13,6 @@ import java.math.BigDecimal;
  * <p>
  * 产品满减表(只针对同商品)
  * </p>
- *
  */
 @TableName("pms_product_full_reduction")
 public class PmsProductFullReduction extends BaseEntity implements Serializable {

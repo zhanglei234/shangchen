@@ -22,7 +22,6 @@ import java.util.List;
  * <p>
  * 后台角色表 前端控制器
  * </p>
- *
  */
 @Slf4j
 @Api(value = "角色管理", description = "", tags = {"角色管理"})
@@ -48,7 +47,6 @@ public class SysRoleController extends ApiController {
         }
         return new CommonResult().failed();
     }
-
 
 
     @ApiOperation(value = "批量删除角色")

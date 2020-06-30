@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zscat.mallplus.annotation.SysLog;
 import com.zscat.mallplus.enums.ConstansValue;
 import com.zscat.mallplus.oms.entity.OmsOrder;
+import com.zscat.mallplus.oms.entity.OmsOrderItem;
+import com.zscat.mallplus.oms.service.IOmsOrderItemService;
 import com.zscat.mallplus.oms.service.IOmsOrderService;
 import com.zscat.mallplus.utils.CommonResult;
 import com.zscat.mallplus.utils.ValidatorUtils;
@@ -13,6 +15,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,6 +36,8 @@ import java.util.List;
 public class OmsOrderController {
     @Resource
     private IOmsOrderService IOmsOrderService;
+    @Resource
+    private IOmsOrderItemService orderItemService;
 
 
     @SysLog(MODULE = "oms", REMARK = "根据条件查询所有订单表列表")
@@ -87,7 +92,6 @@ public class OmsOrderController {
     }
 
 
-
     @ApiOperation(value = "查询订单列表")
     @GetMapping(value = "/order/list")
     public Object orderList(OmsOrder order,
@@ -107,9 +111,30 @@ public class OmsOrderController {
         }
         return new CommonResult().success(page);
     }
+    @SysLog(MODULE = "oms", REMARK = "给订单表分配订单表")
+    @ApiOperation("查询订单表明细")
+    @GetMapping(value = "/{id}")
+    public Object getOmsOrderById(@ApiParam("订单表id") @PathVariable Long id) {
+        try {
+            if (ValidatorUtils.empty(id)) {
+                return new CommonResult().paramFailed("订单表id");
+            }
+            OmsOrder coupon = IOmsOrderService.getById(id);
+            if(coupon!=null && coupon.getId()>0){
+                coupon.setOrderItemList(orderItemService.list(new QueryWrapper<OmsOrderItem>().eq("order_id", coupon.getId())));
+//                coupon.setHistoryList(omsOrderOperateHistoryMapper.selectList(new QueryWrapper<OmsOrderOperateHistory>().eq("order_id", coupon.getId())));
+                return new CommonResult().success(coupon);
+            }
 
+            return new CommonResult().failed("订单已删除");
+        } catch (Exception e) {
+            log.error("查询订单表明细：%s", e.getMessage(), e);
+            return new CommonResult().failed();
+        }
 
-    public static void main(String[] args){
+    }
+
+    public static void main(String[] args) {
         try {
 
             URL url = new URL("http://www.baidu.com");
@@ -122,8 +147,8 @@ public class OmsOrderController {
             }
             in.close();
             out.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
-     }
+    }
 }

@@ -14,7 +14,6 @@ import java.util.Date;
  * <p>
  * <p>
  * </p>
- *
  */
 @Data
 @TableName("sys_admin_log")

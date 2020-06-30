@@ -106,7 +106,6 @@ public class OmsCartItemServiceImpl extends ServiceImpl<OmsCartItemMapper, OmsCa
     }
 
 
-
     @Override
     public int updateAttr(OmsCartItem cartItem) {
         //删除原购物车信息
@@ -119,14 +118,6 @@ public class OmsCartItemServiceImpl extends ServiceImpl<OmsCartItemMapper, OmsCa
         add(cartItem);
         return 1;
     }
-
-
-
-
-
-
-
-
 
 
 }

@@ -13,7 +13,6 @@ import java.io.Serializable;
  * <p>
  * 后台用户和角色关系表
  * </p>
- *
  */
 @TableName("sys_user_role")
 public class SysUserRole extends BaseEntity implements Serializable {

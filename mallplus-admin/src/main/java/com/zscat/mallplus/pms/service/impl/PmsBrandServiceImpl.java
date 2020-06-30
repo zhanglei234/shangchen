@@ -14,7 +14,7 @@ import java.util.List;
  * <p>
  * 品牌表 服务实现类
  * </p>
-  */
+ */
 @Service
 public class PmsBrandServiceImpl extends ServiceImpl<PmsBrandMapper, PmsBrand> implements IPmsBrandService {
     @Resource

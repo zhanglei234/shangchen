@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
  * 自定义异常处理器
-  */
+ */
 @RestControllerAdvice
 @Slf4j
 public class InterfaceExceptionHandler {

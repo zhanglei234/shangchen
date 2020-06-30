@@ -5,7 +5,6 @@ import java.util.Map;
 
 /**
  * 文件类型<p>允许上传的类型<p/>
- *
  */
 public class FileTypeMap {
 

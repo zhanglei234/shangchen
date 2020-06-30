@@ -15,4 +15,4 @@ public class OmsOrderDetail extends OmsOrder {
     @Getter
     @Setter
     private List<OmsOrderItem> orderItemList;
-  }
+}

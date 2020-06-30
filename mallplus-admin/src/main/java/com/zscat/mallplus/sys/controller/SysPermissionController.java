@@ -171,6 +171,4 @@ public class SysPermissionController extends BaseController {
     }
 
 
-
-
 }

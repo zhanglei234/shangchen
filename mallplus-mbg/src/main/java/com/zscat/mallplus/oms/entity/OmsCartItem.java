@@ -17,7 +17,7 @@ import java.util.Date;
  * <p>
  * 购物车表
  * </p>
-  */
+ */
 @Data
 @TableName("oms_cart_item")
 public class OmsCartItem extends BaseEntity implements Serializable {

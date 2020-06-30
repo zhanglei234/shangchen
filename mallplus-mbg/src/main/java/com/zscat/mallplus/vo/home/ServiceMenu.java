@@ -3,6 +3,7 @@ package com.zscat.mallplus.vo.home;
 import lombok.Data;
 
 /**
+ *
  */
 @Data
 public class ServiceMenu {

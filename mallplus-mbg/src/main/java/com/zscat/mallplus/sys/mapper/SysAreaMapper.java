@@ -10,7 +10,6 @@ import java.util.List;
  * <p>
  * Mapper 接口
  * </p>
- *
  */
 public interface SysAreaMapper extends BaseMapper<SysArea> {
 

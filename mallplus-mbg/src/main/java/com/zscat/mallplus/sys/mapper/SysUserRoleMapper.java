@@ -7,7 +7,6 @@ import com.zscat.mallplus.sys.entity.SysUserRole;
  * <p>
  * 后台用户和角色关系表 Mapper 接口
  * </p>
- *
  */
 public interface SysUserRoleMapper extends BaseMapper<SysUserRole> {
 

@@ -1,4 +1,5 @@
 package com.zscat.mallplus.vo;
+
 public class Rediskey {
 
     public static final String ARTICLE_VIEWCOUNT_CODE = "ARTICLEVIEWCOUNTCODE_";

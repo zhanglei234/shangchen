@@ -25,7 +25,9 @@
     import {create${className}, get${className}, update${className}} from '@/api/${moduleName}/${changeClassName}'
     import SingleUpload from '@/components/Upload/singleUpload'
 
-    const default${className} = {
+    const default
+    ${className}
+    = {
         name: ''
     };
     export default {
@@ -64,7 +66,7 @@
             if (this.isEdit) {
                 get${className}(this.$route.query.id).then(response => {
                     this.${changeClassName} = response.data;
-            })
+                })
                 ;
             } else {
                 this.${changeClassName} = Object.assign({},
@@ -75,69 +77,60 @@
         methods: {
             onSubmit(formName) {
                 this.$refs[formName].validate((valid) => {
-                    if(valid) {
+                    if (valid) {
                         this.$confirm('是否提交数据', '提示', {
                             confirmButtonText: '确定',
                             cancelButtonText: '取消',
                             type: 'warning'
                         }).then(() => {
-                            if(this.isEdit
-                    )
-                        {
-                            update${className}(this.$route.query.id, this.${changeClassName}).then(response => {
-                                if(response.code == 200
-                        )
-                            {
-                                this.$refs[formName].resetFields();
-                                this.$message({
-                                    message: '修改成功',
-                                    type: 'success',
-                                    duration: 1000
-                                });
-                                this.$router.back();
-                            }
-                        else
-                            {
-                                this.$message({
-                                    message: response.msg,
-                                    type: 'error',
-                                    duration: 1000
-                                });
-                            }
+                            if (this.isEdit
+                            ) {
+                                update${className}(this.$route.query.id, this.${changeClassName}).then(response => {
+                                    if (response.code == 200
+                                    ) {
+                                        this.$refs[formName].resetFields();
+                                        this.$message({
+                                            message: '修改成功',
+                                            type: 'success',
+                                            duration: 1000
+                                        });
+                                        this.$router.back();
+                                    } else {
+                                        this.$message({
+                                            message: response.msg,
+                                            type: 'error',
+                                            duration: 1000
+                                        });
+                                    }
 
-                        })
-                            ;
-                        }
-                    else
-                        {
-                            create${className}(this.${changeClassName}).then(response => {
-                                if(response.code == 200
-                        )
-                            {
-                                this.$refs[formName].resetFields();
-                                this.${changeClassName} = Object.assign({},
-                            default${className})
+                                })
                                 ;
-                                this.$message({
-                                    message: '提交成功',
-                                    type: 'success',
-                                    duration: 1000
-                                });
-                                this.$router.back();
-                            }
-                        else
-                            {
-                                this.$message({
-                                    message: response.msg,
-                                    type: 'error',
-                                    duration: 1000
-                                });
-                            }
+                            } else {
+                                create${className}(this.${changeClassName}).then(response => {
+                                    if (response.code == 200
+                                    ) {
+                                        this.$refs[formName].resetFields();
+                                        this.${changeClassName} = Object.assign({},
+                                    default${className})
+                                        ;
+                                        this.$message({
+                                            message: '提交成功',
+                                            type: 'success',
+                                            duration: 1000
+                                        });
+                                        this.$router.back();
+                                    } else {
+                                        this.$message({
+                                            message: response.msg,
+                                            type: 'error',
+                                            duration: 1000
+                                        });
+                                    }
 
+                                })
+                                ;
+                            }
                         })
-                            ;
-                        }
-                    })
                         ;
 
                     } else {
@@ -146,9 +139,9 @@
                             type: 'error',
                             duration: 1000
                         });
-                return false;
-            }
-            })
+                        return false;
+                    }
+                })
                 ;
             },
             resetForm(formName) {

@@ -27,7 +27,6 @@ import java.util.stream.Collectors;
  * <p>
  * 后台用户权限表 服务实现类
  * </p>
- *
  */
 @Service
 public class SysPermissionServiceImpl extends ServiceImpl<SysPermissionMapper, SysPermission> implements ISysPermissionService {

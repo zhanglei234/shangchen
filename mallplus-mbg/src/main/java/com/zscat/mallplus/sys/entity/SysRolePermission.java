@@ -12,7 +12,6 @@ import java.io.Serializable;
  * <p>
  * 后台用户角色和权限关系表
  * </p>
- *
  */
 @TableName("sys_role_permission")
 public class SysRolePermission extends BaseEntity implements Serializable {

@@ -6,7 +6,6 @@ import lombok.Data;
 
 /**
  * 代码生成配置
- *
  */
 @Data
 @TableName("gen_config")

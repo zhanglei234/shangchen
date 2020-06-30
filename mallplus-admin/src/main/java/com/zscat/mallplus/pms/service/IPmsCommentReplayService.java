@@ -7,7 +7,7 @@ import com.zscat.mallplus.pms.entity.PmsCommentReplay;
  * <p>
  * 产品评价回复表 服务类
  * </p>
-  */
+ */
 public interface IPmsCommentReplayService extends IService<PmsCommentReplay> {
 
 }

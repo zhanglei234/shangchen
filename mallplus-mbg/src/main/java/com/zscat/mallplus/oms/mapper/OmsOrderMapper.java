@@ -12,9 +12,8 @@ import java.util.Map;
  * <p>
  * 订单表 Mapper 接口
  * </p>
-  */
+ */
 public interface OmsOrderMapper extends BaseMapper<OmsOrder> {
-
 
 
     /**

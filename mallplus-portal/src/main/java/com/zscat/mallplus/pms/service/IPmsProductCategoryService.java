@@ -10,7 +10,6 @@ import java.util.List;
  * <p>
  * 产品分类 服务类
  * </p>
- *
  */
 public interface IPmsProductCategoryService extends IService<PmsProductCategory> {
 

@@ -16,7 +16,6 @@ import java.util.Date;
  * <p>
  * 会员表
  * </p>
- *
  */
 @Data
 @TableName("ums_member")

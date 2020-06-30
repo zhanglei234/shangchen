@@ -13,7 +13,6 @@ import java.util.Map;
 
 /**
  * xml相关的工具类
- *
  */
 @SuppressWarnings("unchecked")
 public class XmlUtil {

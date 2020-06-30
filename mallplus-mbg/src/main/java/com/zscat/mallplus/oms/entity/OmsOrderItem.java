@@ -14,7 +14,7 @@ import java.math.BigDecimal;
  * <p>
  * 订单中所包含的商品
  * </p>
-  */
+ */
 @Data
 @TableName("oms_order_item")
 public class OmsOrderItem extends BaseEntity implements Serializable {

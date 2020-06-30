@@ -2,7 +2,6 @@ package com.zscat.mallplus.exception;
 
 /**
  * 自定义异常
- *
  */
 public class MemberNotExitException extends RuntimeException {
     private static final long serialVersionUID = 1L;

@@ -135,11 +135,11 @@
                 this.listLoading = true;
                 fetchList(this.listQuery).then(response => {
                     this.listLoading = false;
-                this.list = response.data.records;
-                this.total = response.data.total;
-                this.totalPage = response.data.pages;
-                this.pageSize = response.data.size;
-            })
+                    this.list = response.data.records;
+                    this.total = response.data.total;
+                    this.totalPage = response.data.pages;
+                    this.pageSize = response.data.size;
+                })
                 ;
 
             },
@@ -156,19 +156,18 @@
                     cancelButtonText: '取消',
                     type: 'warning'
                 }).then(() => {
-                    delete${className}(row.id
-            ).
-                then(response => {
-                    this.$message({
-                        message: '删除成功',
-                        type: 'success',
-                        duration: 1000
-                    });
-                this.getList();
-            })
-                ;
+                    delete ${className}(row.id
+                    ).then(response => {
+                        this.$message({
+                            message: '删除成功',
+                            type: 'success',
+                            duration: 1000
+                        });
+                        this.getList();
+                    })
+                    ;
 
-            })
+                })
                 ;
 
             },
@@ -219,12 +218,12 @@
                 data.append("showStatus", showStatus);
                 updateShowStatus(data).then(response => {
                     this.getList();
-                this.$message({
-                    message: '修改成功',
-                    type: 'success',
-                    duration: 1000
-                });
-            })
+                    this.$message({
+                        message: '修改成功',
+                        type: 'success',
+                        duration: 1000
+                    });
+                })
                 ;
             },
             add${className}() {

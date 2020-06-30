@@ -10,7 +10,6 @@ import java.util.List;
  * <p>
  * 产品分类 Mapper 接口
  * </p>
- *
  */
 public interface PmsProductCategoryMapper extends BaseMapper<PmsProductCategory> {
 

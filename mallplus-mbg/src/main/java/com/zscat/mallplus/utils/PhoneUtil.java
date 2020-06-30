@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- *          正则表达式手机号码校验类
+ * 正则表达式手机号码校验类
  */
 public class PhoneUtil {
 

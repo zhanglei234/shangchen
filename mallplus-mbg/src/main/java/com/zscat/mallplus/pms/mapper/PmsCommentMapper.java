@@ -9,7 +9,6 @@ import java.util.List;
  * <p>
  * 商品评价表 Mapper 接口
  * </p>
- *
  */
 public interface PmsCommentMapper extends BaseMapper<PmsComment> {
     List<PmsComment> getByProductId(Long productId);

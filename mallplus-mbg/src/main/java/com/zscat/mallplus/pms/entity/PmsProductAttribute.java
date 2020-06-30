@@ -12,7 +12,6 @@ import java.io.Serializable;
  * <p>
  * 商品属性参数表
  * </p>
- *
  */
 @TableName("pms_product_attribute")
 public class PmsProductAttribute extends BaseEntity implements Serializable {

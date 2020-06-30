@@ -14,7 +14,6 @@ import java.util.List;
  * <p>
  * 产品属性分类表
  * </p>
- *
  */
 @Data
 @TableName("pms_product_attribute_category")

@@ -11,7 +11,6 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * 加密
- *
  */
 public class EncryptUtils {
 

@@ -6,6 +6,7 @@ import com.zscat.mallplus.pms.entity.PmsProductCategory;
 import java.util.List;
 
 /**
+ *
  */
 public class PmsProductCategoryWithChildrenItem extends PmsProductCategory {
     private List<PmsProductCategory> children;

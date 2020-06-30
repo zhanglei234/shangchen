@@ -13,7 +13,6 @@ import java.math.BigDecimal;
  * <p>
  * sku的库存
  * </p>
- *
  */
 @TableName("pms_sku_stock")
 public class PmsSkuStock extends BaseEntity implements Serializable {

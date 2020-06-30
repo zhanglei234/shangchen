@@ -18,7 +18,6 @@ import java.util.List;
  * <p>
  * 商品属性参数表 服务实现类
  * </p>
- *
  */
 @Service
 public class PmsProductAttributeServiceImpl extends ServiceImpl<PmsProductAttributeMapper, PmsProductAttribute> implements IPmsProductAttributeService {
@@ -40,7 +39,7 @@ public class PmsProductAttributeServiceImpl extends ServiceImpl<PmsProductAttrib
         //新增商品属性以后需要更新商品属性分类数量
 
         PmsProductAttributeCategory pmsProductAttributeCategory = productAttributeCategoryMapper.selectById(entity.getProductAttributeCategoryId());
-        if(pmsProductAttributeCategory!=null){
+        if (pmsProductAttributeCategory != null) {
             if (entity.getType() == 0) {
                 pmsProductAttributeCategory.setAttributeCount(pmsProductAttributeCategory.getAttributeCount() + 1);
             } else if (entity.getType() == 1) {

@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
  * <p>
  * 产品咨询表 服务实现类
  * </p>
- *
  */
 @Service
 public class PmsProductConsultServiceImpl extends ServiceImpl<PmsProductConsultMapper, PmsProductConsult> implements IPmsProductConsultService {

@@ -17,7 +17,6 @@ import java.util.Set;
 
 /**
  * 获取map中值的工具类,自动进行类型转换
- *
  */
 public class MapUtils {
 

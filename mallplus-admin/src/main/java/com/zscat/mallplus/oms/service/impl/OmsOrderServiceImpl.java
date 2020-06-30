@@ -34,7 +34,6 @@ public class OmsOrderServiceImpl extends ServiceImpl<OmsOrderMapper, OmsOrder> i
     private PmsProductMapper productMapper;
 
 
-
     @Override
     public Map orderDayStatic(String date) {
         Map list = orderMapper.orderDayStatic(date);
@@ -100,10 +99,6 @@ public class OmsOrderServiceImpl extends ServiceImpl<OmsOrderMapper, OmsOrder> i
         return map;
 
     }
-
-
-
-
 
 
 }

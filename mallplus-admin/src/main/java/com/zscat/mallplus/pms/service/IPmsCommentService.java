@@ -7,7 +7,7 @@ import com.zscat.mallplus.pms.entity.PmsComment;
  * <p>
  * 商品评价表 服务类
  * </p>
-  */
+ */
 public interface IPmsCommentService extends IService<PmsComment> {
 
 }

@@ -5,7 +5,6 @@ import java.security.NoSuchAlgorithmException;
 
 /**
  * 签名认证工具类
- *
  */
 public class WeixinCheckoutUtil {
 

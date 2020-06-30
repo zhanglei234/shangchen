@@ -26,11 +26,10 @@ public interface IOmsCartItemService extends IService<OmsCartItem> {
     List<OmsCartItem> list(Long memberId, List<Long> ids);
 
 
-
     /**
      * 修改购物车中商品的规格
      */
     @Transactional
     int updateAttr(OmsCartItem cartItem);
 
- }
+}

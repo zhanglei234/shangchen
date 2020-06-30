@@ -27,7 +27,6 @@ import java.util.List;
  * <p>
  * 商品信息 服务实现类
  * </p>
- *
  */
 @Slf4j
 @Service
@@ -36,7 +35,7 @@ public class PmsProductServiceImpl extends ServiceImpl<PmsProductMapper, PmsProd
     private ApiContext apiContext;
     @Resource
     private PmsProductMapper productMapper;
-     @Resource
+    @Resource
     private IPmsSkuStockService skuStockDao;
     @Resource
     private PmsSkuStockMapper skuStockMapper;
@@ -71,7 +70,7 @@ public class PmsProductServiceImpl extends ServiceImpl<PmsProductMapper, PmsProd
                 sb.append(String.format("%03d", i + 1));
                 skuStock.setSkuCode(sb.toString());
             }
-            if (skuStock.getStock()!=null && skuStock.getStock()>0){
+            if (skuStock.getStock() != null && skuStock.getStock() > 0) {
                 stock = stock + skuStock.getStock();
 
             }
@@ -91,7 +90,6 @@ public class PmsProductServiceImpl extends ServiceImpl<PmsProductMapper, PmsProd
 
         return count;
     }
-
 
 
     @Override
@@ -151,7 +149,6 @@ public class PmsProductServiceImpl extends ServiceImpl<PmsProductMapper, PmsProd
         }
         return productMapper.selectList(queryWrapper);
     }
-
 
 
     /**

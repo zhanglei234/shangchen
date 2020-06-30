@@ -23,7 +23,7 @@ import java.util.Map;
 @RestController
 @Api(tags = "UmsMemberController", description = "会员管理系统")
 @RequestMapping("/api/member")
-public class UmsMemberController  {
+public class UmsMemberController {
     @Autowired
     private IUmsMemberService memberService;
     @Value("${jwt.tokenHeader}")

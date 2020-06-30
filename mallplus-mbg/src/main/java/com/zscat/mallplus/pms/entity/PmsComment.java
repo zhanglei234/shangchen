@@ -13,7 +13,6 @@ import java.util.Date;
  * <p>
  * 商品评价表
  * </p>
- *
  */
 @TableName("pms_comment")
 public class PmsComment extends BaseEntity implements Serializable {

@@ -14,7 +14,6 @@ import java.math.BigDecimal;
  * <p>
  * 会员等级表
  * </p>
- *
  */
 @Data
 @TableName("ums_member_level")

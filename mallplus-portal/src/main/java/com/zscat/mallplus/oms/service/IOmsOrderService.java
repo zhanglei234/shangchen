@@ -19,7 +19,6 @@ import org.springframework.transaction.annotation.Transactional;
 public interface IOmsOrderService extends IService<OmsOrder> {
 
 
-
     /**
      * 根据提交信息生成订单
      */

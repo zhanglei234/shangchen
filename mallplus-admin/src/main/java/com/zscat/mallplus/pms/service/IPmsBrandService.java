@@ -9,8 +9,7 @@ import java.util.List;
  * <p>
  * 品牌表 服务类
  * </p>
- *
-  */
+ */
 public interface IPmsBrandService extends IService<PmsBrand> {
 
     int updateShowStatus(List<Long> ids, Integer showStatus);

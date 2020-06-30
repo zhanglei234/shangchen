@@ -15,12 +15,10 @@ import java.util.Map;
 public interface IUmsMemberService extends IService<UmsMember> {
 
 
-
     /**
      * 根据用户名获取会员
      */
     UmsMember getByUsername(String username);
-
 
 
     /**
@@ -42,17 +40,11 @@ public interface IUmsMemberService extends IService<UmsMember> {
     CommonResult updatePassword(String telephone, String password, String authCode);
 
 
-
-
-
-
     Map<String, Object> login(String username, String password);
 
     String refreshToken(String token);
 
     Object register(UmsMember umsMember);
-
-
 
 
     Object getCurrentMember();

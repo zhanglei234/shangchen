@@ -31,7 +31,7 @@ import java.util.List;
 public class UmsMemberController {
     @Resource
     private IUmsMemberService IUmsMemberService;
-     @Resource
+    @Resource
     private OmsOrderMapper omsOrderMapper;
 
     @SysLog(MODULE = "ums", REMARK = "根据条件查询所有会员表列表")
@@ -82,10 +82,6 @@ public class UmsMemberController {
         }
         return new CommonResult().failed();
     }
-
-
-
-
 
 
     @SysLog(MODULE = "ums", REMARK = "删除会员表")

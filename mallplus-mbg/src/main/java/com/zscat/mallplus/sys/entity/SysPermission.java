@@ -14,7 +14,6 @@ import java.util.Date;
  * <p>
  * 后台用户权限表
  * </p>
- *
  */
 @Setter
 @Getter

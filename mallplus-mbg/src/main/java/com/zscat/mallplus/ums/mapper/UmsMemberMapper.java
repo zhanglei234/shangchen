@@ -10,7 +10,6 @@ import java.util.List;
  * <p>
  * 会员表 Mapper 接口
  * </p>
- *
  */
 public interface UmsMemberMapper extends BaseMapper<UmsMember> {
 

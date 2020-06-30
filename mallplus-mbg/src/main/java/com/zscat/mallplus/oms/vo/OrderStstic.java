@@ -4,7 +4,7 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 
- @Data
+@Data
 public class OrderStstic {
     private Long memberId;
     private int totalCount;

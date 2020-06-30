@@ -17,7 +17,7 @@ import java.util.List;
  * <p>
  * 订单表
  * </p>
-  */
+ */
 @Data
 @TableName("oms_order")
 public class OmsOrder extends BaseEntity implements Serializable {
@@ -54,7 +54,7 @@ public class OmsOrder extends BaseEntity implements Serializable {
     /**
      * 提交时间
      */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     @TableField("create_time")
     private Date createTime;
 
@@ -321,7 +321,7 @@ public class OmsOrder extends BaseEntity implements Serializable {
     @TableField("store_name")
     private String storeName;    //	税号
 
-
+    @TableField(exist = false)
     private String pic;
 
 }

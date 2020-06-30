@@ -15,5 +15,4 @@ import org.springframework.stereotype.Service;
 public class UmsMemberServiceImpl extends ServiceImpl<UmsMemberMapper, UmsMember> implements IUmsMemberService {
 
 
-
 }

@@ -63,15 +63,14 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
     private SysUserRoleMapper adminRoleRelationMapper;
     @Resource
     private ISysUserRoleService adminRoleRelationService;
-     @Resource
+    @Resource
     private SysRoleMapper roleMapper;
-     @Resource
+    @Resource
     private ISysUserRoleService userRoleService;
     @Resource
     private SysPermissionMapper permissionMapper;
     @Resource
     private RedisService redisService;
-
 
 
     @Override
@@ -130,7 +129,6 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
     public List<SysRole> getRoleListByUserId(Long adminId) {
         return roleMapper.getRoleListByUserId(adminId);
     }
-
 
 
     @Override
@@ -226,7 +224,6 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
     }
 
 
-
     @Override
     public int updateShowStatus(List<Long> ids, Integer showStatus) {
         SysUser productCategory = new SysUser();
@@ -234,7 +231,6 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
         return adminMapper.update(productCategory, new QueryWrapper<SysUser>().in("id", ids));
 
     }
-
 
 
     @Override
@@ -250,11 +246,6 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
         role.setPassword(passwordEncoder.encode(newPassword));
         adminMapper.updateById(role);
     }
-
-
-
-
-
 
 
     public void updateRole(Long adminId, String roleIds) {

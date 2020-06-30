@@ -12,7 +12,7 @@ import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 /**
  * Jackson配置类
  * json不返回null的字段
-  */
+ */
 @Configuration
 public class JacksonConfig {
     @Bean

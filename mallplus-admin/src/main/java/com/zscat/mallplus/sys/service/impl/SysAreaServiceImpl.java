@@ -14,7 +14,6 @@ import java.util.List;
  * <p>
  * 服务实现类
  * </p>
- *
  */
 @Service
 public class SysAreaServiceImpl extends ServiceImpl<SysAreaMapper, SysArea> implements ISysAreaService {

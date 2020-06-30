@@ -20,4 +20,4 @@ public class PmsProductAttributeCategoryServiceImpl extends ServiceImpl<PmsProdu
     @Resource
     private PmsProductAttributeCategoryMapper productAttributeCategoryMapper;
 
- }
+}

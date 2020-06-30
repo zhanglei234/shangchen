@@ -24,7 +24,6 @@ import java.util.List;
  * <p>
  * 后台用户角色表 服务实现类
  * </p>
- *
  */
 @Service
 public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole> implements ISysRoleService {
@@ -37,7 +36,7 @@ public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole> impl
     private SysRoleMapper roleMapper;
     @Resource
     private SysRolePermissionMapper rolePermissionRelationMapper;
-     @Resource
+    @Resource
     private ISysUserService userService;
 
     @Override

@@ -26,7 +26,6 @@ import java.util.List;
 
 /**
  * 订单管理Controller
- *
  */
 @Slf4j
 @RestController
@@ -60,16 +59,16 @@ public class OmsPortalOrderController {
         OmsOrder productQueryParam = new OmsOrder();
         productQueryParam.setMemberUsername(phone);
 
-         List<OmsOrder> list= orderService.list(new QueryWrapper<>(productQueryParam).select(ConstansValue.sampleOrderList));
-         for (int i = 0 ;i<list.size();i++){
+        List<OmsOrder> list = orderService.list(new QueryWrapper<>(productQueryParam).select(ConstansValue.sampleOrderList));
+        for (int i = 0; i < list.size(); i++) {
 
-             //获取商品基础属性
-             PmsProduct product = pmsProductService.getById(list.get(i).getGoodsId());
-             if(product!=null){
-                 list.get(i).setPic(product.getPic());
-             }
+            //获取商品基础属性
+            PmsProduct product = pmsProductService.getById(list.get(i).getGoodsId());
+            if (product != null) {
+                list.get(i).setPic(product.getPic());
+            }
 
-         }
+        }
         return new CommonResult().success(list);
     }
 

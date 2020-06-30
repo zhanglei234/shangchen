@@ -14,7 +14,6 @@ import java.util.Date;
  * <p>
  * 定时任务调度日志表
  * </p>
- *
  */
 @Setter
 @Getter

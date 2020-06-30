@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  * <p>
  * 商品评价表 服务实现类
  * </p>
-  */
+ */
 @Service
 public class PmsCommentServiceImpl extends ServiceImpl<PmsCommentMapper, PmsComment> implements IPmsCommentService {
 
