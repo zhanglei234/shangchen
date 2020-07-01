@@ -214,7 +214,7 @@ public class PmsProductController {
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @ResponseBody
     @SysLog(MODULE = "pms", REMARK = "创建商品")
-    public Object create(@RequestBody PmsProduct entity){
+    public Object create(@RequestBody PmsProduct entity) {
         try {
             entity.setDeleteStatus(0);
             entity.setVerifyStatus(1);
@@ -275,8 +275,8 @@ public class PmsProductController {
     public Object updateProduct(@RequestBody PmsProduct pmsProduct) {
         try {
             PmsProductParam pmsProductParam = new PmsProductParam();
-            BeanUtils.copyProperties(pmsProduct,pmsProductParam);
-            if (IPmsProductService.update(pmsProduct.getId(), pmsProductParam)==1) {
+            BeanUtils.copyProperties(pmsProduct, pmsProductParam);
+            if (IPmsProductService.update(pmsProduct.getId(), pmsProductParam) == 1) {
                 return new CommonResult().success();
             }
         } catch (Exception e) {

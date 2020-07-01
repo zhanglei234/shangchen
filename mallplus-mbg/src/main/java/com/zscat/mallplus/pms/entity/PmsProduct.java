@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.zscat.mallplus.utils.BaseEntity;
-import com.zscat.mallplus.vo.timeline.TimeSecound;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -269,6 +268,4 @@ public class PmsProduct extends BaseEntity implements Serializable {
     private int qsType;
     @TableField(exist = false)
     private BigDecimal fenxiaoPrice;
-    @TableField(exist = false)
-    private TimeSecound timeSecound;
 }
