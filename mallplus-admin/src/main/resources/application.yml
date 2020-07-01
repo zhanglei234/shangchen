@@ -1,0 +1,29 @@
+authCode:
+  expire:
+    seconds: 90
+jwt:
+  expiration: 604800
+  secret: mySecret
+  tokenHead: 'Bearer '
+  tokenHeader: Authorization
+logging:
+  level:
+    com:
+      zscat:
+        mallplus: debug
+        mallplus.cms.mapper: debug
+    root: info
+redis:
+  key:
+    prefix:
+      authCode: 'admin:authCode:'
+      orderId: 'admin:orderId:'
+server:
+  port: 8085
+spring:
+  jackson:
+    time-zone: GMT+8
+  profiles:
+    active: dev
+  thymeleaf:
+    cache: false

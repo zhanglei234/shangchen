@@ -1,0 +1,20 @@
+authCode:
+  expire:
+    seconds: 90
+jwt:
+  expiration: 120000000
+  secret: mySecret
+  tokenHead: 'Bearer '
+  tokenHeader: authorization
+redis:
+  key:
+    prefix:
+      authCode: 'portal:authCode:'
+      orderId: 'portal:orderId:'
+server:
+  port: 8083
+spring:
+  jackson:
+    time-zone: GMT+8
+  profiles:
+    active: prod
