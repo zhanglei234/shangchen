@@ -23,7 +23,20 @@
     </sql>
 
     <select id="selectByUserName" resultType="com.zscat.mallplus.sys.entity.SysUserVo">
-        select * from sys_user
+       SELECT
+	id,
+	username,
+	PASSWORD,
+	icon,
+	email,
+	nick_name nickName,
+	note,
+	create_time createTime,
+	login_time loginTime,
+	STATUS,
+	supply_id supplyId
+FROM
+	sys_user
         where username = #{username}
     </select>
 </mapper>

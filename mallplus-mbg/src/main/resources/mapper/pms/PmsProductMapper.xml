@@ -81,7 +81,40 @@
     </resultMap>
 
     <select id="getUpdateInfo" resultMap="updateInfoMap">
-        SELECT *,
+        SELECT 	p.id,
+	p.brand_id,
+	p.product_category_id,
+	p.feight_template_id,
+	p.product_attribute_category_id,
+	p.`name`,
+	p.pic,
+	p.product_sn,
+	p.delete_status,
+	p.publish_status,
+	p.new_status,
+	p.recommand_status,
+	p.verify_status,
+	p.sort,
+	p.sale,
+	p.price,
+	p.promotion_price,
+	p.gift_growth,
+	p.gift_point,
+	p.use_point_limit,
+	p.sub_title,
+	p.description,
+	p.original_price,
+	p.stock,
+	p.low_stock,
+	p.unit,
+	p.weight,
+	p.preview_status,
+	p.service_ids,
+	p.keywords,
+	p.note,
+	p.album_pics,
+	p.detail_title,
+	p.detail_desc,
         pc.parent_id cateParentId,
         l.id ladder_id,l.product_id ladder_product_id,l.discount ladder_discount,l.count ladder_count,l.price
         ladder_price,
@@ -104,11 +137,11 @@
     </select>
     <select id="selectSubjectProductRelationByProductId"
             resultMap="com.zscat.mallplus.pms.mapper.CmsSubjectProductRelationMapper.BaseResultMap">
-        select * from cms_subject_product_relation where product_id=#{productId}
+        select id,subject_id,product_id,store_id from cms_subject_product_relation where product_id=#{productId}
     </select>
     <select id="selectPrefrenceAreaProductRelationByProductId"
             resultMap="com.zscat.mallplus.pms.mapper.CmsPrefrenceAreaProductRelationMapper.BaseResultMap">
-        select * from cms_prefrence_area_product_relation where product_id=#{productId}
+        select prefrence_area_id,product_id,store_id from cms_prefrence_area_product_relation where product_id=#{productId}
     </select>
 
     <select id="listByDate" resultMap="BaseResultMap">

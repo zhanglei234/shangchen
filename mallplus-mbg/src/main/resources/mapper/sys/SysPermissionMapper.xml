@@ -22,7 +22,7 @@
     </sql>
     <select id="getPermissionList" resultMap="BaseResultMap">
         SELECT
-        p.*
+        p.id, p.pid, p.name, p.value, p.icon, p.type, p.uri, p.status, p.create_time, p.sort
         FROM
         sys_role_permission r
         LEFT JOIN sys_permission p ON r.permission_id = p.id

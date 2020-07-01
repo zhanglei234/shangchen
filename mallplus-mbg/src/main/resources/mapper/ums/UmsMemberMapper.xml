@@ -38,7 +38,43 @@
     </sql>
 
     <select id="listByDate" resultMap="BaseResultMap">
-        select * from ums_member where
+        SELECT
+        id,
+        member_level_id,
+        username,
+        PASSWORD,
+        nickname,
+        phone,
+        STATUS,
+        create_time,
+        icon,
+        gender,
+        birthday,
+        city,
+        job,
+        personalized_signature,
+        source_type,
+        integration,
+        growth,
+        luckey_count,
+        history_integration,
+        avatar,
+        weixin_openid,
+        invitecode,
+        blance,
+        school_id,
+        store_id,
+        area_id,
+        school_name,
+        area_name,
+        buy_count,
+        buy_money,
+        member_level_name,
+        room_nums,
+        room_desc
+        FROM
+        ums_member
+        where
         <if test="type==1">
             date_format(create_time,'%y%m%d') = date_format(#{date},'%y%m%d')
         </if>
